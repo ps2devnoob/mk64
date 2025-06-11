@@ -761,9 +761,14 @@ extern void osAckRamromWrite(void);
 
 /* byte string operations */
 
-extern void bcopy(const void*, void*, size_t);
-extern int bcmp(const void*, const void*, int);
-extern void bzero(void*, size_t);
+#ifndef _PS2
+	// PS2SDK already have these implementations	
+	// So we remove to not have conflicts...
+
+	extern void bcopy(const void*, void*, size_t);
+	extern int bcmp(const void*, const void*, int);
+	extern void bzero(void*, size_t);
+#endif
 
 /* Miscellaneous operations */
 
