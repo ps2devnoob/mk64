@@ -24,7 +24,7 @@ glabel __umoddi3
     sw    $a3, 0xc($sp)
     ld    $t7, 8($sp)
     ld    $t6, ($sp)
-    ddivu $zero, $t6, $t7
+    divu $zero,$t6,$t7
     bnez  $t7, .L80324144
      nop
     break 7
@@ -42,7 +42,7 @@ glabel __udivdi3
     sw    $a3, 0xc($sp)
     ld    $t7, 8($sp)
     ld    $t6, ($sp)
-    ddivu $zero, $t6, $t7
+    divu $zero,$t6,$t7
     bnez  $t7, .L80324180
      nop
     break 7
@@ -60,7 +60,7 @@ glabel __moddi3
     sw    $a3, 0xc($sp)
     ld    $t7, 8($sp)
     ld    $t6, ($sp)
-    ddivu $zero, $t6, $t7
+    divu $zero,$t6,$t7
     bnez  $t7, .L803241E8
      nop
     break 7
@@ -78,7 +78,7 @@ glabel __divdi3
     sw    $a3, 0xc($sp)
     ld    $t7, 8($sp)
     ld    $t6, ($sp)
-    ddiv  $zero, $t6, $t7
+    div $zero,$t6,$t7
     nop
     bnez  $t7, .L80324228
      nop
